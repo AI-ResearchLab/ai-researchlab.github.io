@@ -1,0 +1,29 @@
+main:
+  - title: "소개"
+    url: /about/
+
+  - title: "팀원"
+    url: /members/
+
+  - title: "연구 분야"
+    children:
+      - title: "전체 보기"
+        url: /categories/
+      - title: "───────────"
+        url: "#"
+      - title: "🧠 LLM"
+        url: /categories/llm/
+      - title: "👁️ Vision"
+        url: /categories/vision/
+      - title: "🎨 Multimodal"
+        url: /categories/multimodal/
+      - title: "🤖 VLM"
+        url: /categories/vlm/
+      - title: "🌍 World Model"
+        url: /categories/world-model/
+
+  - title: "AI Survey"
+    url: /survey/
+
+  - title: "Weekly Trends"
+    url: https://github.com/AI-ResearchLab/weekly-trends

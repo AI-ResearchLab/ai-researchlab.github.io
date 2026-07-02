@@ -1,0 +1,60 @@
+# 팀원 데이터
+# 팀원 추가 시 이 파일에 항목을 추가하세요.
+# avatar 이미지는 assets/images/members/ 에 업로드하세요.
+
+- name: "박효빈"
+  role: "리드"
+  github: "hbp001"
+  bio: "Deep Learning과 Physical AI를 연구합니다."
+  interests:
+    - "Deep Learning"
+    - "Physical AI"
+  avatar: "/assets/images/members/park-hyobin.jpg"
+  avatar_placeholder: "효빈"
+
+- name: "김태섭"
+  role: "팀원"
+  github: "herela77"
+  bio: "Deep Learning을 연구합니다."
+  interests:
+    - "Deep Learning"
+  avatar: "/assets/images/members/kim-taeseop.png"
+  avatar_placeholder: "태섭"
+
+- name: "박준성"
+  role: "팀원"
+  github: "junseong01"
+  bio: "Deep Learning, Computer Vision, LLM을 연구합니다."
+  interests:
+    - "Deep Learning"
+    - "Computer Vision"
+    - "LLM"
+  avatar: "/assets/images/members/park-junseong.jpg"
+  avatar_placeholder: "준성"
+
+- name: "최현빈"
+  role: "팀원"
+  github: "chb2066"
+  bio: "Deep Learning을 연구합니다."
+  interests:
+    - "Deep Learning"
+  avatar: "/assets/images/members/choi-hyeonbin.jpg"
+  avatar_placeholder: "현빈"
+
+- name: "송승재"
+  role: "팀원"
+  github: "thdtmdwo3301"
+  bio: "Deep Learning을 연구합니다."
+  interests:
+    - "Deep Learning"
+  avatar: "/assets/images/members/song-seungjae.jpg"
+  avatar_placeholder: "승재"
+
+- name: "박민서"
+  role: "팀원"
+  github: "MinSeo-Park-hub"
+  bio: "Deep Learning을 연구합니다."
+  interests:
+    - "Deep Learning"
+  avatar: "/assets/images/members/park-minseo.jpg"
+  avatar_placeholder: "민서"
