@@ -198,7 +198,7 @@ function renderSurveyIndex(outDir, config, surveys) {
   const body = `
 <div class="page" style="max-width:var(--max-width);">
   <div class="page__header">
-    <h1 class="page__title">AI Survey — 논문 서베이 &amp; 연구 동향</h1>
+    <h1 class="page__title">AI Survey - 논문 서베이 &amp; 연구 동향</h1>
     <p class="page__meta">팀원들이 직접 읽고 정리한 AI/ML 논문 서베이 &amp; 연구 동향 아카이브입니다.</p>
   </div>
   <p>새로운 서베이 추가는 <code>content/surveys/</code> 폴더에 마크다운 파일을 추가하고 PR을 올려주세요.</p>

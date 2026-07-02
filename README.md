@@ -1,6 +1,6 @@
 # 🧠 AI Research Lab
 
-> AI/ML 트렌드 팔로업 & 연구 동향 아카이브 — [AI-ResearchLab](https://github.com/AI-ResearchLab) 팀의 공동 포트폴리오 사이트
+> AI/ML 트렌드 팔로업 & 연구 동향 아카이브 - [AI-ResearchLab](https://github.com/AI-ResearchLab) 팀의 공동 포트폴리오 사이트
 
 [![Deploy](https://github.com/AI-ResearchLab/ai-researchlab.github.io/actions/workflows/pages.yml/badge.svg)](https://github.com/AI-ResearchLab/ai-researchlab.github.io/actions/workflows/pages.yml)
 

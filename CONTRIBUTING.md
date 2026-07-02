@@ -1,4 +1,4 @@
-# 기여 가이드 — ai-researchlab.github.io
+# 기여 가이드 - ai-researchlab.github.io
 
 ## 팀원이 콘텐츠를 추가하는 법
 
@@ -20,7 +20,6 @@ excerpt: "홈 페이지에 표시될 요약"
 ### 2. 논문 서베이
 
 **저장 위치**: `content/surveys/YYYY-MM-DD-논문약어.md`
-**샘플**: `content/surveys/2026-07-01-memgpt-agent-memory.md` 참고
 
 ```yaml
 ---

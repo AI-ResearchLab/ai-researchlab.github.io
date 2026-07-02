@@ -14,7 +14,7 @@ function readContentFile(filePath) {
   return { data, body: match[2] };
 }
 
-// 아주 작은 {{ page.field }} 치환기 — 저자들이 서베이/포스트 본문에서
+// 아주 작은 {{ page.field }} 치환기 - 저자들이 서베이/포스트 본문에서
 // front matter 값을 그대로 인용하고 싶을 때 쓰는 용도 (예: 리뷰어, 날짜).
 function substitutePageVars(body, data) {
   return body.replace(/\{\{\s*page\.(\w+)\s*(?:\|\s*date:\s*"[^"]*")?\s*\}\}/g, (_, key) => {

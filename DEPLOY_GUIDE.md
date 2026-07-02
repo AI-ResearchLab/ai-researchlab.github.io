@@ -143,7 +143,6 @@ git push origin feature/parkjs-llm-w27
 ```
 파일명 규칙: 날짜-영문제목.md
 예: content/posts/2026-07-08-agent-memory-trends.md
-    content/posts/2026-07-01-llm-trends-w27.md  ← 기존 샘플 참고
 ```
 
 Front Matter 최소 필수 항목:
@@ -168,7 +167,6 @@ excerpt: "홈 페이지에 표시될 요약 문장"
 
 ```
 예: content/surveys/2026-07-15-efficient-kv-cache.md
-    content/surveys/2026-07-01-memgpt-agent-memory.md  ← 기존 샘플 참고
 ```
 
 Front Matter 필수 항목:
@@ -256,7 +254,7 @@ npm install
 npm run dev
 ```
 
-브라우저에서 `http://localhost:4000` 접속. 파일을 수정한 뒤에는 `npm run dev`를 다시 실행하면 됩니다 (저장할 때마다 자동 새로고침되는 기능은 아직 없습니다 — 필요해지면 추가 예정).
+브라우저에서 `http://localhost:4000` 접속. 파일을 수정한 뒤에는 `npm run dev`를 다시 실행하면 됩니다 (저장할 때마다 자동 새로고침되는 기능은 아직 없습니다 - 필요해지면 추가 예정).
 
 ---
 
