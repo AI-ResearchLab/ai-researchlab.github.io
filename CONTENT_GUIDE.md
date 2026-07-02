@@ -1,4 +1,4 @@
-# 📝 콘텐츠 작성 가이드 — 연구분야·서베이 카테고리 원리
+# 📝 콘텐츠 작성 가이드 - 연구분야·서베이 카테고리 원리
 
 이 문서는 팀원이 글을 쓸 때 "왜 이렇게 써야 카테고리에 뜨는지"를 이해하기 위한 가이드입니다.
 파일 하나 추가하는 절차뿐 아니라, 그 파일이 어떤 규칙으로 카테고리 페이지에 나타나는지까지 정리합니다.
@@ -10,7 +10,7 @@
 | **블로그 포스트** | `content/posts/` | 짧은 트렌드/동향 글. 상단 내비 "연구 분야" 메뉴와 연결됨 | `categories` (배열, 복수 가능) |
 | **AI 서베이** | `content/surveys/` | 논문 딥다이브 리뷰. 상단 내비 "AI Survey" 메뉴와 연결됨 | `category` (문자열, 단수 하나) |
 
-**포스트는 `categories`(복수형 배열), 서베이는 `category`(단수형 문자열)** — 필드명과 타입이 서로 다릅니다.
+**포스트는 `categories`(복수형 배열), 서베이는 `category`(단수형 문자열)** - 필드명과 타입이 서로 다릅니다.
 헷갈려서 반대로 쓰면 카테고리 페이지에 안 뜨니 주의하세요.
 
 ---
@@ -50,7 +50,7 @@ const matched = posts.filter((p) => (p.data.categories || []).includes(cat.title
 ```yaml
 categories:
   - LLM      # ✅ /categories/llm/ 에 뜸
-  - Weekly   # ⚠️ CATEGORIES 목록에 없는 이름 — 전용 페이지는 없지만 아래 "전체 보기"에는 뜸
+  - Weekly   # ⚠️ CATEGORIES 목록에 없는 이름 - 전용 페이지는 없지만 아래 "전체 보기"에는 뜸
 ```
 
 ### 1-3. "카테고리 전체 보기"(`/categories/`)는 다르게 동작합니다
@@ -148,7 +148,7 @@ const FILENAME_RE = /^(\d{4})-(\d{2})-(\d{2})-(.+)\.md$/;
 
 ## 5. 자주 하는 실수 체크리스트
 
-- [ ] 포스트는 `categories`(복수, 배열) / 서베이는 `category`(단수, 문자열) — 서로 헷갈리지 않기
+- [ ] 포스트는 `categories`(복수, 배열) / 서베이는 `category`(단수, 문자열) - 서로 헷갈리지 않기
 - [ ] 포스트 `categories` 값은 `LLM / Vision / Multimodal / VLM / World Model / Weekly` 철자 그대로 (대소문자 포함)
 - [ ] 파일명은 `YYYY-MM-DD-슬러그.md` 형식 지키기
 - [ ] 새 연구 분야를 추가하고 싶다면 `scripts/lib/render-pages.js`의 `CATEGORIES` 배열 + `content/data/navigation.yml` 둘 다 수정
