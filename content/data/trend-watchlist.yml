@@ -2,6 +2,66 @@
 # 직접 수정하지 말고 weekly-trends/trend-digest/trend-watchlist.md를 수정하세요.
 manual: []
 auto:
+  - title: "Dockerless: Environment-Free Program Verifier for Coding Agents"
+    url: "https://arxiv.org/abs/2606.28436"
+    date: "2026-07-07"
+    note: "Dockerless는 코드 패치를 실행 없이 검증하여 환경 설정 비용을 줄이고 성능을 향상시킵니다."
+    reviewed: false
+  - title: "DOPD: Dual On-policy Distillation"
+    url: "https://arxiv.org/abs/2606.30626"
+    date: "2026-07-07"
+    note: "DOPD는 특권 정보를 활용하여 학생과 교사 정책 간의 동적 토큰 수준 감독을 통해 성능 향상을 도모하는 새로운 이중 증류 패러다임을 제안한다."
+    reviewed: false
+  - title: "Program-as-Weights: A Programming Paradigm for Fuzzy Functions"
+    url: "https://arxiv.org/abs/2607.02512"
+    date: "2026-07-07"
+    note: "이 논문은 자연어 명세를 바탕으로 효율적인 신경 아티팩트를 생성하는 새로운 프로그래밍 패러다임을 제안한다."
+    reviewed: false
+  - title: "The Mirage of Optimizing Training Policies: Monotonic Inference Policies as the Real Objective for LLM Reinforcement Learning"
+    url: "https://arxiv.org/abs/2606.29526"
+    date: "2026-07-07"
+    note: "이 논문은 LLM 강화 학습에서 훈련과 추론 간의 불일치를 해결하기 위한 새로운 정책 최적화 목표를 제안한다."
+    reviewed: false
+  - title: "LiveEdit: Towards Real-Time Diffusion-Based Streaming Video Editing"
+    url: "https://arxiv.org/abs/2606.26740"
+    date: "2026-07-07"
+    note: "이 논문은 실시간 비디오 편집을 위한 새로운 프레임워크를 제안하여 안정성과 반응성을 개선한 점에서 주목할 만하다."
+    reviewed: false
+  - title: "BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding"
+    url: "https://arxiv.org/abs/2606.31315"
+    date: "2026-07-07"
+    note: "BlockPilot은 샘플에 따라 최적의 블록 크기를 예측하여 확산 기반 추측 디코딩의 성능을 향상시킵니다."
+    reviewed: false
+  - title: "Does VLA Even Know the Basics? Measuring Commonsense and World Knowledge Retention in Vision-Language-Action Models"
+    url: "https://arxiv.org/abs/2606.19297"
+    date: "2026-07-07"
+    note: "이 논문은 VLA 모델의 상식 및 사실 지식 유지 정도를 평가하는 새로운 프로토콜을 제안한다."
+    reviewed: false
+  - title: "Formalizing Latent Thoughts: Four Axioms of Thought Representation in LLMs"
+    url: "https://arxiv.org/abs/2606.27378"
+    date: "2026-07-07"
+    note: "이 논문은 LLM의 잠재적 사고 표현을 평가하기 위한 네 가지 공리적 프레임워크를 제시하여, 기존 평가의 한계를 드러냅니다."
+    reviewed: false
+  - title: "AgenticSTS: A Bounded-Memory Testbed for Long-Horizon LLM Agents"
+    url: "https://arxiv.org/abs/2607.02255"
+    date: "2026-07-07"
+    note: "이 논문은 장기 목표를 가진 LLM 에이전트를 위한 새로운 메모리 계약 방식을 제안하여 성능 향상을 보여줍니다."
+    reviewed: false
+  - title: "Scenes as Objects, Not Primitives: Instance-Structured 3D Tokenization from Unposed Views"
+    url: "https://arxiv.org/abs/2606.29513"
+    date: "2026-07-07"
+    note: "이 논문은 비정렬 다중 뷰 이미지에서 객체 중심의 3D 토큰 그룹을 직접 추출하여 장면 구조를 개선하는 혁신적인 방법을 제안한다."
+    reviewed: false
+  - title: "PhysisForcing: Physics Reinforced World Simulator for Robotic Manipulation"
+    url: "https://arxiv.org/abs/2606.28128"
+    date: "2026-07-07"
+    note: "PhysisForcing는 물리적 일관성을 강화하여 로봇 조작 시뮬레이션의 신뢰성을 높이는 새로운 훈련 프레임워크를 제안한다."
+    reviewed: false
+  - title: "ReFreeKV: Towards Threshold-Free KV Cache Compression"
+    url: "https://arxiv.org/abs/2502.16886"
+    date: "2026-07-07"
+    note: "ReFreeKV는 입력에 의존하지 않는 KV 캐시 압축 방법을 제안하여 메모리 소모를 효과적으로 줄인다."
+    reviewed: false
   - title: "SkillOpt: Executive Strategy for Self-Evolving Agent Skills"
     url: "https://arxiv.org/abs/2605.23904"
     date: "2026-07-07"
