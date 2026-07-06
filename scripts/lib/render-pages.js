@@ -30,14 +30,14 @@ function surveyCard(survey) {
 function renderHome(outDir, config, { members }) {
   const featureCards = [
     {
-      title: 'Weekly Trends',
-      desc: '매주 arXiv·Papers with Code·HN·GitHub·Hugging Face에서 AI 최신 논문·트렌드(LLM·CV·VLM·VLA·Multimodal·World Model 등)를 자동 수집·요약하고, 팀원이 수동으로 팔로업한 논문을 한곳에 모읍니다. 눈에 띄는 논문은 딥다이브 서베이로 이어집니다.',
-      url: '/weekly-trends/',
-    },
-    {
       title: 'Paper Reviews',
       desc: '단순 요약을 넘어 "왜 중요한가·실무 활용" 관점이 담긴 논문 딥다이브 리뷰. 팀원 로테이션으로 격주 1편씩 발행합니다.',
       url: '/survey/',
+    },
+    {
+      title: 'Weekly Trends',
+      desc: '매주 arXiv·Papers with Code·HN·GitHub·Hugging Face에서 AI 최신 논문·트렌드(LLM·CV·VLM·VLA·Multimodal·World Model 등)를 자동 수집·요약하고, 팀원이 수동으로 팔로업한 논문을 한곳에 모읍니다. 눈에 띄는 논문은 딥다이브 서베이로 이어집니다.',
+      url: '/weekly-trends/',
     },
   ];
 
