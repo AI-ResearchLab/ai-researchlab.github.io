@@ -1,4 +1,79 @@
-# 이 파일은 weekly-trends/tools/sync_trend_watchlist.py로 자동 생성/갱신됩니다.
-# 직접 수정하지 말고 weekly-trends 레포의 trend-digest/trend-watchlist.md를 수정하세요.
+# 이 파일은 weekly-trends/tools/sync_trend_watchlist.py로 자동 생성됩니다.
+# 직접 수정하지 말고 weekly-trends/trend-digest/trend-watchlist.md를 수정하세요.
 manual: []
-auto: []
+auto:
+  - title: "SkillOpt: Executive Strategy for Self-Evolving Agent Skills"
+    url: "https://arxiv.org/abs/2605.23904"
+    date: "2026-07-07"
+    note: "SkillOpt는 에이전트 기술을 체계적으로 최적화하여 성능을 향상시키는 최초의 방법론이다."
+    reviewed: false
+  - title: "Geometric Context Transformer for Streaming 3D Reconstruction"
+    url: "https://arxiv.org/abs/2604.14141"
+    date: "2026-07-07"
+    note: "LingBot-Map은 효율적인 3D 재구성을 위한 기하학적 컨텍스트 변환기를 활용하여 기존 방법보다 우수한 성능을 보여줍니다."
+    reviewed: false
+  - title: "Unlimited OCR Works"
+    url: "https://arxiv.org/abs/2606.23050"
+    date: "2026-07-07"
+    note: "Unlimited OCR는 인간의 작업 기억을 모방하여 긴 문서도 효율적으로 처리할 수 있는 혁신적인 OCR 모델이다."
+    reviewed: false
+  - title: "PaddleOCR-VL-1.6: Expanding the Frontier of Document Parsing with Under-Optimized Region Refinement and Progressive Post-Training"
+    url: "https://arxiv.org/abs/2606.03264"
+    date: "2026-07-07"
+    note: "PaddleOCR-VL-1.6은 지역 최적화 및 점진적 후속 학습을 통해 문서 파싱 성능을 획기적으로 향상시켰습니다."
+    reviewed: false
+  - title: "Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots"
+    url: "https://arxiv.org/abs/2607.02501"
+    date: "2026-07-07"
+    note: "Embodied.cpp는 다양한 로봇에서의 임베디드 AI 모델 실행을 위한 모듈형 C++ 런타임을 제공한다."
+    reviewed: false
+  - title: "TRACER: Trace-Based Adaptive Cost-Efficient Routing for LLM Classification"
+    url: "https://arxiv.org/abs/2604.14531"
+    date: "2026-07-07"
+    note: "TRACER는 LLM의 생산 로그를 활용해 비용 효율적인 서브게이트 라우팅을 구현하여 분류 성능을 향상시킵니다."
+    reviewed: false
+  - title: "Ultralytics YOLO26: Unified Real-Time End-to-End Vision Models"
+    url: "https://arxiv.org/abs/2606.03748"
+    date: "2026-07-07"
+    note: "Ultralytics YOLO26는 실시간 비전 모델의 효율성과 정확성을 개선하여 다양한 작업에서 성능을 향상시킵니다."
+    reviewed: false
+  - title: "COLLEAGUE.SKILL: Automated AI Skill Generation via Expert Knowledge Distillation"
+    url: "https://arxiv.org/abs/2605.31264"
+    date: "2026-07-07"
+    note: "COLLEAGUE.SKILL은 전문가 지식을 증류하여 개인화된 AI 기술을 자동 생성하는 시스템을 제안한다."
+    reviewed: false
+  - title: "Multi-Resolution Flow Matching: Training-Free Diffusion Acceleration via Staged Sampling"
+    url: "https://arxiv.org/abs/2607.01642"
+    date: "2026-07-07"
+    note: "MrFlow는 훈련 없이 다단계 해상도 샘플링을 통해 텍스트-이미지 확산의 속도를 5배 이상 향상시킵니다."
+    reviewed: false
+  - title: "Scaling the Horizon, Not the Parameters: Reaching Trillion-Parameter Performance with a 35B Agent"
+    url: "https://arxiv.org/abs/2606.30616"
+    date: "2026-07-07"
+    note: "Agents-A1는 35B 모델로 트리온 매개변수 성능을 달성하며, 긴 지평선과 다양한 에이전트 능력을 활용한 혁신적인 접근을 제시한다."
+    reviewed: false
+  - title: "JoyAI-VL-Interaction: Real-Time Vision-Language Interaction Intelligence"
+    url: "https://arxiv.org/abs/2606.14777"
+    date: "2026-07-07"
+    note: "JoyAI-VL-Interaction은 실시간 비전-언어 상호작용을 가능하게 하는 혁신적인 모델을 제안한다."
+    reviewed: false
+  - title: "Cosmos 3: Omnimodal World Models for Physical AI"
+    url: "https://arxiv.org/abs/2606.02800"
+    date: "2026-07-07"
+    note: "Cosmos 3는 다양한 입력-output 구성을 지원하는 통합 오미모달 세계 모델로, 물리적 AI의 새로운 기준을 제시합니다."
+    reviewed: false
+  - title: "Fara-1.5: Scalable Learning Environments for Computer Use Agents"
+    url: "https://arxiv.org/abs/2606.20785"
+    date: "2026-07-07"
+    note: "Fara-1.5는 컴퓨터 사용 에이전트를 위한 확장 가능한 데이터 생성 파이프라인을 제시한다."
+    reviewed: false
+  - title: "Orca: The World is in Your Mind"
+    url: "https://arxiv.org/abs/2606.30534"
+    date: "2026-07-07"
+    note: "Orca는 다중 모달 신호로부터 통합된 세계 잠재 공간을 학습하여 상태 전이 모델링을 통해 세계 이해 및 예측을 가능하게 한다."
+    reviewed: false
+  - title: "Agentic Abstention: Do Agents Know When to Stop Instead of Act?"
+    url: "https://arxiv.org/abs/2606.28733"
+    date: "2026-07-07"
+    note: "이 논문은 불확실한 상황에서 LLM 에이전트가 언제 행동을 중단해야 하는지를 다루며, 실용적인 의사결정 문제를 제시한다."
+    reviewed: false
