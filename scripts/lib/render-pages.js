@@ -48,10 +48,10 @@ function surveyCard(survey) {
 function renderHome(outDir, config, { posts, surveys, members }) {
   const featureCards = [
     {
-      emoji: '📰',
+      emoji: '📊',
       title: 'Weekly Trends',
-      desc: '매일 4개 소스(arXiv, HN, GitHub, HuggingFace)를 자동 수집하고, 매주 팀이 핵심 트렌드를 선별해 큐레이션 리포트를 발행합니다.',
-      url: 'https://github.com/AI-ResearchLab/weekly-trends',
+      desc: '매주 arXiv·Papers with Code·HN·GitHub·Hugging Face에서 AI 최신 논문·트렌드(LLM·CV·VLM·VLA·Multimodal·World Model 등)를 자동 수집·요약하고, 팀원이 수동으로 팔로업한 논문을 한곳에 모읍니다. 눈에 띄는 논문은 딥다이브 서베이로 이어집니다.',
+      url: '/weekly-trends/',
     },
     {
       emoji: '📄',
@@ -64,12 +64,6 @@ function renderHome(outDir, config, { posts, surveys, members }) {
       title: 'Implementations',
       desc: '트렌드 기술을 직접 구현한 미니 프로젝트 모음. RAG 파이프라인, 에이전트 실험 등 코드와 회고를 함께 공유합니다.',
       url: 'https://github.com/AI-ResearchLab/implementations',
-    },
-    {
-      emoji: '🧠',
-      title: 'AI Trend Watchlist',
-      desc: 'arXiv·Hugging Face 트렌딩 자동 수집 + 팀원 수동 추가로 계속 쌓이는 AI 트렌드 논문 목록(매주 갱신, 30일 지나면 자동 정리). 눈에 띄는 논문은 딥다이브 서베이로 이어집니다.',
-      url: '/llm-watchlist/',
     },
   ];
 
@@ -94,7 +88,7 @@ function renderHome(outDir, config, { posts, surveys, members }) {
     <p class="hero__lead">arXiv · HN · GitHub Trending · Hugging Face에서 매일 AI/ML 최신 동향을 수집하고, <strong>팀의 인사이트로 큐레이션</strong>합니다.</p>
     <div class="hero__actions">
       <a class="btn btn--primary" href="https://github.com/AI-ResearchLab" target="_blank" rel="noopener">GitHub Organization</a>
-      <a class="btn btn--ghost" href="https://github.com/AI-ResearchLab/weekly-trends" target="_blank" rel="noopener">📊 Weekly Trends</a>
+      <a class="btn btn--ghost" href="/weekly-trends/">📊 Weekly Trends</a>
     </div>
   </div>
 </section>
@@ -111,7 +105,7 @@ function renderHome(outDir, config, { posts, surveys, members }) {
 
   <section class="section">
     <h2 class="section__title">📊 이번 주 AI 트렌드</h2>
-    <p>자세한 내용은 <a href="https://github.com/AI-ResearchLab/weekly-trends" target="_blank" rel="noopener">weekly-trends 레포</a>에서 확인하세요.</p>
+    <p>자세한 내용은 <a href="/weekly-trends/">Weekly Trends 페이지</a>에서 확인하세요.</p>
     <table>
       <thead><tr><th>분야</th><th>핵심 동향</th></tr></thead>
       <tbody>
@@ -237,26 +231,26 @@ function watchlistTable(items) {
   </table>`;
 }
 
-function renderLlmWatchlist(outDir, config, watchlist) {
+function renderWeeklyTrends(outDir, config, watchlist) {
   const manual = (watchlist && watchlist.manual) || [];
   const auto = (watchlist && watchlist.auto) || [];
 
   const body = `
 <div class="page" style="max-width:var(--max-width);">
   <div class="page__header">
-    <h1 class="page__title">🧠 AI 트렌드 워치리스트</h1>
-    <p class="page__meta">arXiv 자동 수집(+ Hugging Face 트렌딩)과 팀원 수동 추가로 계속 쌓이는 논문 목록입니다. LLM에 국한하지 않고 에이전트·RAG·멀티모달·월드모델 등 AI가 나아가는 방향 전반을 담습니다. 눈에 띄는 논문은 <a href="/survey/">AI Survey</a>의 딥다이브 리뷰로 이어집니다.</p>
+    <h1 class="page__title">📊 Weekly Trends</h1>
+    <p class="page__meta">매주 arXiv·Papers with Code·HN·GitHub·Hugging Face에서 AI가 자동으로 수집·요약한 최신 논문과 트렌드(LLM·CV·VLM·VLA·Multimodal·World Model 등)와, 팀원이 직접 팔로업한 논문을 한곳에 모았습니다. 눈에 띄는 논문은 <a href="/survey/">AI Survey</a>의 딥다이브 리뷰로 이어집니다.</p>
   </div>
-  <p>목록은 <a href="https://github.com/AI-ResearchLab/weekly-trends/blob/main/llm-digest/llm-watchlist.md" target="_blank" rel="noopener">weekly-trends/llm-digest/llm-watchlist.md</a>에서 관리되며, 매주 자동으로 이 페이지에 반영됩니다. 등록된 지 30일이 지난 논문은 자동으로 목록에서 정리됩니다.</p>
+  <p>이 목록은 <a href="https://github.com/AI-ResearchLab/weekly-trends" target="_blank" rel="noopener">weekly-trends</a> 파이프라인이 매주 자동으로 갱신하며, 등록된 지 30일이 지난 논문은 자동으로 목록에서 정리됩니다.</p>
 
-  <h2 class="section__title">✍️ 팀원 수동 추가</h2>
+  <h2 class="section__title">✍️ 팀원 수동 팔로업</h2>
   ${watchlistTable(manual)}
 
-  <h2 class="section__title">🤖 자동 수집</h2>
+  <h2 class="section__title">🤖 AI 자동 수집·요약</h2>
   ${watchlistTable(auto)}
 </div>`;
-  const doc = renderDocument({ title: 'AI 트렌드 워치리스트', url: '/llm-watchlist/', bodyHtml: body, config });
-  writePage(outDir, '/llm-watchlist/', doc);
+  const doc = renderDocument({ title: 'Weekly Trends', url: '/weekly-trends/', bodyHtml: body, config });
+  writePage(outDir, '/weekly-trends/', doc);
 }
 
 function renderCategoriesIndex(outDir, config, posts) {
@@ -310,7 +304,7 @@ module.exports = {
   renderAbout,
   renderMembers,
   renderSurveyIndex,
-  renderLlmWatchlist,
+  renderWeeklyTrends,
   renderCategoriesIndex,
   renderCategoryPages,
 };
