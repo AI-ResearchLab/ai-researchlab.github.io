@@ -65,6 +65,12 @@ function renderHome(outDir, config, { posts, surveys, members }) {
       desc: '트렌드 기술을 직접 구현한 미니 프로젝트 모음. RAG 파이프라인, 에이전트 실험 등 코드와 회고를 함께 공유합니다.',
       url: 'https://github.com/AI-ResearchLab/implementations',
     },
+    {
+      emoji: '🧠',
+      title: 'AI Trend Watchlist',
+      desc: 'arXiv·Hugging Face 트렌딩 자동 수집 + 팀원 수동 추가로 계속 쌓이는 AI 트렌드 논문 목록(매주 갱신, 30일 지나면 자동 정리). 눈에 띄는 논문은 딥다이브 서베이로 이어집니다.',
+      url: '/llm-watchlist/',
+    },
   ];
 
   const featureHtml = featureCards
@@ -213,6 +219,46 @@ function renderSurveyIndex(outDir, config, surveys) {
   writePage(outDir, '/survey/', doc);
 }
 
+function watchlistTable(items) {
+  if (!items.length) return '<p>아직 등록된 논문이 없습니다.</p>';
+  const rows = items
+    .map(
+      (item) => `<tr>
+        <td>${item.reviewed ? '✅' : '⬜'}</td>
+        <td><a href="${item.url}" target="_blank" rel="noopener">${item.title}</a></td>
+        <td>${item.date}</td>
+        <td>${item.note || ''}</td>
+      </tr>`
+    )
+    .join('');
+  return `<table>
+    <thead><tr><th>리뷰</th><th>논문</th><th>날짜</th><th>메모</th></tr></thead>
+    <tbody>${rows}</tbody>
+  </table>`;
+}
+
+function renderLlmWatchlist(outDir, config, watchlist) {
+  const manual = (watchlist && watchlist.manual) || [];
+  const auto = (watchlist && watchlist.auto) || [];
+
+  const body = `
+<div class="page" style="max-width:var(--max-width);">
+  <div class="page__header">
+    <h1 class="page__title">🧠 AI 트렌드 워치리스트</h1>
+    <p class="page__meta">arXiv 자동 수집(+ Hugging Face 트렌딩)과 팀원 수동 추가로 계속 쌓이는 논문 목록입니다. LLM에 국한하지 않고 에이전트·RAG·멀티모달·월드모델 등 AI가 나아가는 방향 전반을 담습니다. 눈에 띄는 논문은 <a href="/survey/">AI Survey</a>의 딥다이브 리뷰로 이어집니다.</p>
+  </div>
+  <p>목록은 <a href="https://github.com/AI-ResearchLab/weekly-trends/blob/main/llm-digest/llm-watchlist.md" target="_blank" rel="noopener">weekly-trends/llm-digest/llm-watchlist.md</a>에서 관리되며, 매주 자동으로 이 페이지에 반영됩니다. 등록된 지 30일이 지난 논문은 자동으로 목록에서 정리됩니다.</p>
+
+  <h2 class="section__title">✍️ 팀원 수동 추가</h2>
+  ${watchlistTable(manual)}
+
+  <h2 class="section__title">🤖 자동 수집</h2>
+  ${watchlistTable(auto)}
+</div>`;
+  const doc = renderDocument({ title: 'AI 트렌드 워치리스트', url: '/llm-watchlist/', bodyHtml: body, config });
+  writePage(outDir, '/llm-watchlist/', doc);
+}
+
 function renderCategoriesIndex(outDir, config, posts) {
   const byCategory = {};
   posts.forEach((p) => {
@@ -264,6 +310,7 @@ module.exports = {
   renderAbout,
   renderMembers,
   renderSurveyIndex,
+  renderLlmWatchlist,
   renderCategoriesIndex,
   renderCategoryPages,
 };

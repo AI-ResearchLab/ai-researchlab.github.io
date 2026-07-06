@@ -25,5 +25,8 @@ main:
   - title: "AI Survey"
     url: /survey/
 
+  - title: "🧠 AI Trend Watchlist"
+    url: /llm-watchlist/
+
   - title: "Weekly Trends"
     url: https://github.com/AI-ResearchLab/weekly-trends

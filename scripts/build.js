@@ -11,6 +11,7 @@ const {
   renderAbout,
   renderMembers,
   renderSurveyIndex,
+  renderLlmWatchlist,
   renderCategoriesIndex,
   renderCategoryPages,
 } = require('./lib/render-pages');
@@ -31,6 +32,12 @@ function loadConfig() {
 
 function loadMembers() {
   return yaml.load(fs.readFileSync(path.join(ROOT, 'content/data/members.yml'), 'utf8'));
+}
+
+function loadLlmWatchlist() {
+  const file = path.join(ROOT, 'content/data/llm-watchlist.yml');
+  if (!fs.existsSync(file)) return { manual: [], auto: [] };
+  return yaml.load(fs.readFileSync(file, 'utf8')) || { manual: [], auto: [] };
 }
 
 function buildCss() {
@@ -56,6 +63,7 @@ function build() {
   const members = loadMembers();
   const posts = loadPosts();
   const surveys = loadSurveys();
+  const llmWatchlist = loadLlmWatchlist();
 
   buildCss();
   copyAssets();
@@ -64,6 +72,7 @@ function build() {
   renderAbout(OUT_DIR, config);
   renderMembers(OUT_DIR, config, members);
   renderSurveyIndex(OUT_DIR, config, surveys);
+  renderLlmWatchlist(OUT_DIR, config, llmWatchlist);
   renderCategoriesIndex(OUT_DIR, config, posts);
   renderCategoryPages(OUT_DIR, config, posts);
   renderPosts(OUT_DIR, config, posts);
@@ -74,6 +83,7 @@ function build() {
     '/about/',
     '/members/',
     '/survey/',
+    '/llm-watchlist/',
     '/categories/',
     ...CATEGORIES.map((c) => `/categories/${c.slug}/`),
     ...posts.map((p) => p.url),
