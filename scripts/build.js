@@ -4,16 +4,13 @@ const yaml = require('js-yaml');
 const sass = require('sass');
 
 const { copyDir, writeFile, ensureDirSync } = require('./lib/util');
-const { loadPosts, loadSurveys, renderPosts, renderSurveys } = require('./lib/render-posts');
+const { loadSurveys, renderSurveys } = require('./lib/render-posts');
 const {
-  CATEGORIES,
   renderHome,
   renderAbout,
   renderMembers,
   renderSurveyIndex,
   renderWeeklyTrends,
-  renderCategoriesIndex,
-  renderCategoryPages,
 } = require('./lib/render-pages');
 const { renderDocument } = require('./lib/layout');
 const { generateFeed, generateSitemap } = require('./lib/feed');
@@ -36,7 +33,7 @@ function loadMembers() {
 
 function loadWeeklyTrends() {
   // weekly-trends 레포의 sync 워크플로우가 이 파일을 자동 갱신합니다.
-  const file = path.join(ROOT, 'content/data/llm-watchlist.yml');
+  const file = path.join(ROOT, 'content/data/trend-watchlist.yml');
   if (!fs.existsSync(file)) return { manual: [], auto: [] };
   return yaml.load(fs.readFileSync(file, 'utf8')) || { manual: [], auto: [] };
 }
@@ -62,21 +59,17 @@ function build() {
 
   const config = loadConfig();
   const members = loadMembers();
-  const posts = loadPosts();
   const surveys = loadSurveys();
   const weeklyTrends = loadWeeklyTrends();
 
   buildCss();
   copyAssets();
 
-  renderHome(OUT_DIR, config, { posts, surveys, members });
+  renderHome(OUT_DIR, config, { members });
   renderAbout(OUT_DIR, config);
   renderMembers(OUT_DIR, config, members);
   renderSurveyIndex(OUT_DIR, config, surveys);
   renderWeeklyTrends(OUT_DIR, config, weeklyTrends);
-  renderCategoriesIndex(OUT_DIR, config, posts);
-  renderCategoryPages(OUT_DIR, config, posts);
-  renderPosts(OUT_DIR, config, posts);
   renderSurveys(OUT_DIR, config, surveys);
 
   const allUrls = [
@@ -85,17 +78,14 @@ function build() {
     '/members/',
     '/survey/',
     '/weekly-trends/',
-    '/categories/',
-    ...CATEGORIES.map((c) => `/categories/${c.slug}/`),
-    ...posts.map((p) => p.url),
     ...surveys.map((s) => s.url),
   ];
-  writeFile(OUT_DIR, 'feed.xml', generateFeed(config, posts));
+  writeFile(OUT_DIR, 'feed.xml', generateFeed(config, surveys));
   writeFile(OUT_DIR, 'sitemap.xml', generateSitemap(config, allUrls));
   writeFile(OUT_DIR, '.nojekyll', '');
   writeFile(OUT_DIR, '404.html', render404(config));
 
-  console.log(`빌드 완료: 포스트 ${posts.length}개, 서베이 ${surveys.length}개, 카테고리 페이지 ${CATEGORIES.length}개`);
+  console.log(`빌드 완료: 서베이 ${surveys.length}개`);
 }
 
 build();

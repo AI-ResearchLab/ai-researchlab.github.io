@@ -5,7 +5,7 @@ function ensureDirSync(dir) {
   fs.mkdirSync(dir, { recursive: true });
 }
 
-// urlPath 예: '/', '/about/', '/categories/llm/' → dist 안의 index.html 경로로 변환
+// urlPath 예: '/', '/about/', '/weekly-trends/' → dist 안의 index.html 경로로 변환
 function writePage(outDir, urlPath, html) {
   const rel = urlPath === '/' ? 'index.html' : path.join(urlPath.replace(/^\//, ''), 'index.html');
   const full = path.join(outDir, rel);

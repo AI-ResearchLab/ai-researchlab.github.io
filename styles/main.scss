@@ -653,6 +653,131 @@ blockquote {
   }
 }
 
+// ─── Weekly Trends: 좌/우 2열 + 페이지네이션 ──────────────────
+.wt-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 1rem;
+}
+
+.wt-col {
+  min-width: 0; // grid 자식 오버플로우 방지
+}
+
+.wt-list {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.wt-item {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 0.85rem 1rem;
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.wt-item__head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.wt-item__status {
+  flex: none;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.12rem 0.5rem;
+  border-radius: 999px;
+  line-height: 1.4;
+
+  &--done {
+    color: var(--accent-text);
+    background: rgba(99, 102, 241, 0.15);
+  }
+
+  &--todo {
+    color: var(--text-muted);
+    background: var(--row-hover-bg);
+    border: 1px solid var(--card-border);
+  }
+}
+
+.wt-item__title {
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.wt-item__meta {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+}
+
+.wt-item__note {
+  margin: 0.45rem 0 0;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.wt-empty {
+  list-style: none;
+  color: var(--text-muted);
+  padding: 0.85rem 0;
+}
+
+.wt-pager {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 1.15rem;
+
+  &[hidden] {
+    display: none;
+  }
+
+  button {
+    min-width: 2.1rem;
+    padding: 0.3rem 0.55rem;
+    border: 1px solid var(--card-border);
+    background: var(--card-bg);
+    color: var(--text);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-family: inherit;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+
+    &:hover {
+      border-color: var(--card-border-hover);
+    }
+
+    &[aria-current="true"] {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+      font-weight: 700;
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .wt-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
 // ─── 반응형 ──────────────────────────────────────────────────
 @media (max-width: 768px) {
   .hero {

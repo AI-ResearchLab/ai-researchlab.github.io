@@ -4,7 +4,6 @@ const { readContentFile, renderMarkdown, estimateReadMinutes } = require('./mark
 const { renderDocument } = require('./layout');
 const { writePage } = require('./util');
 
-const POSTS_DIR = path.join(__dirname, '../../content/posts');
 const SURVEYS_DIR = path.join(__dirname, '../../content/surveys');
 const FILENAME_RE = /^(\d{4})-(\d{2})-(\d{2})-(.+)\.md$/;
 
@@ -30,13 +29,6 @@ function loadCollection(dir) {
       };
     })
     .sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
-}
-
-function loadPosts() {
-  return loadCollection(POSTS_DIR).map((post) => ({
-    ...post,
-    url: `/blog/${post.year}/${post.month}/${post.day}/${post.slug}/`,
-  }));
 }
 
 function loadSurveys() {
@@ -86,15 +78,6 @@ function renderEntryDetail(entry, config, { kicker, metaExtra } = {}) {
   });
 }
 
-function renderPosts(outDir, config, posts) {
-  posts.forEach((post) => {
-    const html = renderEntryDetail(post, config, {
-      kicker: (post.data.categories || []).join(' · '),
-    });
-    writePage(outDir, post.url, html);
-  });
-}
-
 function renderSurveys(outDir, config, surveys) {
   surveys.forEach((survey) => {
     const html = renderEntryDetail(survey, config, {
@@ -105,4 +88,4 @@ function renderSurveys(outDir, config, surveys) {
   });
 }
 
-module.exports = { loadPosts, loadSurveys, renderPosts, renderSurveys, formatDate };
+module.exports = { loadSurveys, renderSurveys, formatDate };

@@ -119,6 +119,7 @@ ${bodyHtml}
 ${renderFooter(config)}
 <script src="/assets/js/theme-toggle.js"></script>
 <script src="/assets/js/nav-toggle.js"></script>
+<script src="/assets/js/watchlist-paginate.js"></script>
 </body>
 </html>
 `;

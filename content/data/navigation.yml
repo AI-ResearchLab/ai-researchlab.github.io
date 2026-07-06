@@ -5,23 +5,6 @@ main:
   - title: "팀원"
     url: /members/
 
-  - title: "연구 분야"
-    children:
-      - title: "전체 보기"
-        url: /categories/
-      - title: "───────────"
-        url: "#"
-      - title: "LLM"
-        url: /categories/llm/
-      - title: "Vision"
-        url: /categories/vision/
-      - title: "Multimodal"
-        url: /categories/multimodal/
-      - title: "VLM"
-        url: /categories/vlm/
-      - title: "World Model"
-        url: /categories/world-model/
-
   - title: "Paper Reviews"
     url: /survey/
 
