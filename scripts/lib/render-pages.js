@@ -59,22 +59,15 @@ function renderHome(outDir, config, { posts, surveys, members }) {
       desc: '단순 요약을 넘어 "왜 중요한가·실무 활용" 관점이 담긴 논문 딥다이브 리뷰. 팀원 로테이션으로 격주 1편씩 발행합니다.',
       url: '/survey/',
     },
-    {
-      emoji: '🛠️',
-      title: 'Implementations',
-      desc: '트렌드 기술을 직접 구현한 미니 프로젝트 모음. RAG 파이프라인, 에이전트 실험 등 코드와 회고를 함께 공유합니다.',
-      url: 'https://github.com/AI-ResearchLab/implementations',
-    },
   ];
 
   const featureHtml = featureCards
     .map(
       (f) => `
-<div class="card">
+<a class="card" href="${f.url}" style="text-decoration:none;color:inherit;display:block;">
   <h3 class="card__title">${f.emoji} ${f.title}</h3>
   <p class="card__excerpt">${f.desc}</p>
-  <a class="btn btn--ghost" style="margin-top:1rem;" href="${f.url}">보러 가기</a>
-</div>`
+</a>`
     )
     .join('');
 
@@ -86,10 +79,6 @@ function renderHome(outDir, config, { posts, surveys, members }) {
   <div class="hero__inner">
     <h1 class="hero__title">${config.title}</h1>
     <p class="hero__lead">arXiv · HN · GitHub Trending · Hugging Face에서 매일 AI/ML 최신 동향을 수집하고, <strong>팀의 인사이트로 큐레이션</strong>합니다.</p>
-    <div class="hero__actions">
-      <a class="btn btn--primary" href="https://github.com/AI-ResearchLab" target="_blank" rel="noopener">GitHub Organization</a>
-      <a class="btn btn--ghost" href="/weekly-trends/">📊 Weekly Trends</a>
-    </div>
   </div>
 </section>
 
