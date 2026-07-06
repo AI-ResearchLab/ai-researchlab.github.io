@@ -11,18 +11,18 @@ main:
         url: /categories/
       - title: "───────────"
         url: "#"
-      - title: "🧠 LLM"
+      - title: "LLM"
         url: /categories/llm/
-      - title: "👁️ Vision"
+      - title: "Vision"
         url: /categories/vision/
-      - title: "🎨 Multimodal"
+      - title: "Multimodal"
         url: /categories/multimodal/
-      - title: "🤖 VLM"
+      - title: "VLM"
         url: /categories/vlm/
-      - title: "🌍 World Model"
+      - title: "World Model"
         url: /categories/world-model/
 
-  - title: "AI Survey"
+  - title: "Paper Reviews"
     url: /survey/
 
   - title: "Weekly Trends"

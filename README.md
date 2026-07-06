@@ -1,6 +1,6 @@
 # 🧠 AI Research Lab
 
-> AI/ML 트렌드 팔로업 & 연구 동향 아카이브 - [AI-ResearchLab](https://github.com/AI-ResearchLab) 팀의 공동 포트폴리오 사이트
+> AI 최신 트렌드 팔로업 & 연구 동향 아카이브 - [AI-ResearchLab](https://github.com/AI-ResearchLab) 팀의 공동 포트폴리오 사이트
 
 [![Deploy](https://github.com/AI-ResearchLab/ai-researchlab.github.io/actions/workflows/pages.yml/badge.svg)](https://github.com/AI-ResearchLab/ai-researchlab.github.io/actions/workflows/pages.yml)
 
@@ -8,9 +8,8 @@
 
 ## 소개
 
-최신 AI/ML 논문 서베이, 연구 분야별(LLM · Vision · Multimodal · VLM · World Model) 트렌드,
+최신 AI 논문 서베이, 연구 분야별(Computer Vision · LLM · Multimodal · VLM · VLA · World Model 등) 트렌드,
 팀원 소개를 큐레이션하는 팀 포트폴리오 사이트입니다.
-Jekyll 등 기성 프레임워크 없이, 마크다운 콘텐츠를 정적 HTML로 변환하는 **자체 빌드 파이프라인**을 직접 만들어 사용합니다.
 
 ## Tech Stack
 
