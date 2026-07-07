@@ -5,7 +5,7 @@ category: "Evaluation"
 year: 2026
 authors: "Yana Wei, Hongbo Peng, Yanlin Lai, Liang Zhao, Kangheng Lin, En Yu, Keyu Lv, Han Zhou, Yin Tang, Haodong Li, Mitt Huang, Hangyu Guo, Jianjian Sun, Zheng Ge, Xiangyu Zhang, Daxin Jiang, Vishal M. Patel"
 contribution: "MLLM 평가에서 선형 평균 채점 방식을 버리고, 필수 사실(Must-Right)을 하나라도 틀리면 즉시 0점 처리하는 Gated Scoring을 도입해 \"점수는 높지만 실제로는 믿을 수 없는\" 벤치마크 포화 문제를 정면으로 겨냥한 논문."
-reviewer: "GitHub아이디"
+reviewer: "junseong01"
 paper_url: "https://arxiv.org/abs/2606.28322"
 tags: [evaluation, benchmark, multimodal, mllm]
 excerpt: "MLLM 평가에서 선형 평균 채점 방식을 버리고, 필수 사실(Must-Right)을 하나라도 틀리면 즉시 0점 처리하는 Gated Scoring을 도입해 \"점수는 높지만 실제로는 믿을 수 없는\" 벤치마크 포화 문제를 정면으로 겨냥한 논문."
