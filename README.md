@@ -22,14 +22,18 @@
 
 ```
 content/
-├── posts/      # 트렌드 블로그 포스트
-├── surveys/    # 논문 서베이
-├── pages/      # 소개 등 고정 페이지
-└── data/       # members.yml, navigation.yml
-scripts/        # 빌드 스크립트
+├── surveys/    # 논문 서베이 (paper-reviews 레포의 리뷰를 프론트매터 포함 형식으로 옮겨온 것)
+├── pages/      # 소개 등 고정 페이지 (about.md)
+└── data/
+    ├── members.yml          # 팀원 소개 (팀원 추가 시 직접 편집)
+    ├── navigation.yml       # 상단 메뉴 구성
+    └── trend-watchlist.yml  # weekly-trends 레포의 sync 워크플로우가 자동 갱신 (직접 수정 금지)
+scripts/        # 빌드 스크립트 (build.js가 각 페이지를 dist/에 렌더)
 styles/         # Sass 스타일
 assets/         # 이미지, JS
 ```
+
+빌드되는 페이지: `/`, `/about/`, `/members/`, `/survey/`(리뷰 목록), `/survey/{slug}/`(리뷰 상세), `/weekly-trends/`.
 
 ## 로컬 실행
 
