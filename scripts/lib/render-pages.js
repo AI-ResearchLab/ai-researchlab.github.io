@@ -186,7 +186,7 @@ function watchlistColumn(title, items) {
           <span class="wt-item__status wt-item__status--${item.reviewed ? 'done' : 'todo'}">${item.reviewed ? '완료' : '예정'}</span>
           <a class="wt-item__title" href="${item.url}" target="_blank" rel="noopener">${item.title}</a>
         </div>
-        ${item.date ? `<div class="wt-item__meta">${item.date}</div>` : ''}
+        ${item.date ? `<div class="wt-item__meta">${item.date}${item.author ? ` · ${item.author}` : ''}</div>` : ''}
         ${item.note ? `<p class="wt-item__note">${item.note}</p>` : ''}
       </li>`
         )
