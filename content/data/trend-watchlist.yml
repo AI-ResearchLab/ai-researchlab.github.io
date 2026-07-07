@@ -6,7 +6,10 @@ manual:
     date: "2026-07-07"
     note: "포화된 멀티모달 벤치마크 점수와 실제 취약성 간 간극을 메우려고 1,038개 이미지 + 1만개 이상 세부 rubric으로 \"Gated Scoring\"(필수 요소 실패 시 이진 페널티) 평가법을 제안. VLM 평가 방법론 레퍼런스로 참고할 만함."
     reviewed: false
+<<<<<<< HEAD
     author: "@junseong01"
+=======
+>>>>>>> 947626cfb0c928406925f61f69ba1c0ad5d217e2
 auto:
   - title: "Dockerless: Environment-Free Program Verifier for Coding Agents"
     url: "https://arxiv.org/abs/2606.28436"
